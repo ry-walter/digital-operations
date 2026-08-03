@@ -176,11 +176,13 @@ function futureOnly(pto) {
 
 async function refreshDashboard() {
   const events = getEvents();
+  const today = todayISO();
+  const upcomingEvents = events.filter(ev => ev.date >= today);
   const livePTO = await fetchLivePTO();
   const pto = futureOnly(livePTO || getLocalPTO());
   liveActivePTO = !!livePTO;
   document.getElementById("live-indicator").textContent = liveActivePTO ? "LIVE SYS" : "LOCAL";
-  renderStats(events, pto);
+  renderStats(upcomingEvents, pto);
   renderEvents(events);
   renderPTO(pto);
 }
