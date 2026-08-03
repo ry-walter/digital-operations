@@ -38,9 +38,21 @@ function groupEvents(events) {
   return groups;
 }
 
+// Sports events (from the "High Profile Sporting Events" Google Sheet) are
+// tagged by their broadcast network in the category field; everything else
+// comes from the Airtable "NATION AIR TABLE" snapshot.
+const SPORTS_NETWORKS = ["FOX", "FOXE1", "FOXE2"];
+function eventSourceBadge(ev) {
+  const isSports = SPORTS_NETWORKS.includes((ev.category || "").trim());
+  return isSports
+    ? { label: "Sports", classes: "bg-blue-50 text-blue-700" }
+    : { label: "Nation", classes: "bg-red-50 text-red-700" };
+}
+
 function eventRowHTML(ev) {
   const d = parseISO(ev.date);
   const dayNum = String(d.getDate()).padStart(2,"0");
+  const badge = eventSourceBadge(ev);
   return `
   <div class="flex items-start gap-4 rounded-xl border border-zinc-200 bg-white p-4 group">
     <div class="flex h-12 w-12 flex-none items-center justify-center rounded-lg bg-red-50 text-red-800 font-semibold">
@@ -54,6 +66,7 @@ function eventRowHTML(ev) {
       <div class="font-medium text-zinc-900">${escapeHTML(ev.title)}</div>
       <div class="mt-0.5 text-xs text-zinc-500">${escapeHTML(ev.category || "")}</div>
     </div>
+    <span class="flex-none self-start rounded-full ${badge.classes} px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wide">${badge.label}</span>
     <button data-remove-event="${ev.date}|${encodeURIComponent(ev.title)}"
       class="opacity-0 group-hover:opacity-100 text-zinc-300 hover:text-red-600 transition">✕</button>
   </div>`;
