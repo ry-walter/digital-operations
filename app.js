@@ -1,4 +1,4 @@
-/* FOX NATION DASHBOARD - SHARED APP LOGIC */
+/* FOX NATION DASHBOARD — SHARED APP LOGIC */
 
 const LS_EVENTS = "fnd_events_v1";
 const LS_PTO = "fnd_pto_v1";
@@ -109,45 +109,64 @@ function parseWallCalendarCSV(csvText) {
 
   let year = new Date().getFullYear();
   let month = null; // 0-11
+  let weekdayCols = null; // exact column indices for [Sun,Mon,Tue,Wed,Thu,Fri,Sat]
+  // (Google Sheets CSV export duplicates merged cells' worth of columns as
+  // blanks — e.g. a "Sunday" header merged across 2 columns exports as
+  // "Sunday,,Monday,,...". So weekday columns are NOT reliably 0-6; we must
+  // detect their real positions from the header row itself.)
+
+  function nonBlankCount(r) { return r.filter(c => c.trim() !== "").length; }
+
+  function findWeekdayHeaderCols(r) {
+    const idxOf = name => r.findIndex(c => c.trim().toLowerCase() === name);
+    const order = ["sunday","monday","tuesday","wednesday","thursday","friday","saturday"];
+    const cols = order.map(idxOf);
+    if (cols.every(i => i !== -1) && cols.every((v,k) => k === 0 || v > cols[k-1])) return cols;
+    return null;
+  }
+
+  function isDayRow(r, cols) {
+    if (!cols) return { ok: false, count: 0 };
+    let count = 0;
+    for (const idx of cols) {
+      const cell = (r[idx] || "").trim();
+      if (cell === "") continue;
+      if (/^\d{1,2}$/.test(cell) && parseInt(cell,10) >= 1 && parseInt(cell,10) <= 31) { count++; continue; }
+      return { ok: false, count: 0 };
+    }
+    return { ok: count >= 1, count };
+  }
+  function dayColsOf(r, cols) {
+    return cols.map(idx => ({ idx, num: /^\d{1,2}$/.test((r[idx]||"").trim()) ? parseInt(r[idx].trim(),10) : null }))
+      .filter(c => c.num !== null && c.num >= 1 && c.num <= 31);
+  }
 
   for (let i = 0; i < rows.length; i++) {
     const row = rows[i];
     const joined = row.join(" ");
 
-    // Month/year header, e.g. "AUGUST 2026"
+    // Month/year header, e.g. "AUGUST 2026" (only 1-2 non-blank cells, even
+    // though the row may have many trailing blank columns from merges).
     const monthMatch = MONTH_NAMES.find(m => joined.toUpperCase().includes(m.toUpperCase()));
     const yearMatch = joined.match(/\b(20\d{2})\b/);
-    if (monthMatch && yearMatch && row.length <= 2) {
+    if (monthMatch && yearMatch && nonBlankCount(row) <= 2) {
       month = MONTH_NAMES.indexOf(monthMatch);
       year = parseInt(yearMatch[1], 10);
+      weekdayCols = null; // must re-detect for this month's header row
       continue;
     }
 
-    // A "day number" row: within the first 7 (weekday) columns, every
-    // non-blank cell is a bare integer 1-31, and at least one is present.
-    // (Restricting to 7 cols means an extra trailing "LINKS" column, which
-    // often contains text, doesn't disqualify the row. Requiring ALL
-    // weekday cells to be numeric-or-blank avoids false positives on
-    // content rows that merely contain a number somewhere.)
-    function isDayRow(r) {
-      const weekCols = r.slice(0, 7);
-      let count = 0;
-      for (const cell of weekCols) {
-        if (cell === "") continue;
-        if (/^\d{1,2}$/.test(cell) && parseInt(cell,10) >= 1 && parseInt(cell,10) <= 31) { count++; continue; }
-        return { ok: false, count: 0 };
-      }
-      return { ok: count >= 1, count };
-    }
-    function dayColsOf(r) {
-      return r.slice(0,7).map((cell, idx) => ({ idx, num: /^\d{1,2}$/.test(cell) ? parseInt(cell,10) : null }))
-        .filter(c => c.num !== null && c.num >= 1 && c.num <= 31);
+    // Weekday header row, e.g. "Sunday,,Monday,,Tuesday,,...,,LINKS"
+    const foundCols = findWeekdayHeaderCols(row);
+    if (foundCols) {
+      weekdayCols = foundCols;
+      continue;
     }
 
-    const thisIsDayRow = isDayRow(row);
+    const thisIsDayRow = isDayRow(row, weekdayCols);
 
-    if (thisIsDayRow.ok && month !== null) {
-      const dayCols = dayColsOf(row);
+    if (thisIsDayRow.ok && month !== null && weekdayCols) {
+      const dayCols = dayColsOf(row, weekdayCols);
       // Collect content rows until the next day-number row or month header
       const dateByCol = {};
       dayCols.forEach(c => { dateByCol[c.idx] = c.num; });
@@ -163,15 +182,16 @@ function parseWallCalendarCSV(csvText) {
         // would otherwise falsely truncate the week's content rows.
         const nextMonthMatch = MONTH_NAMES.find(m => nextJoined.toUpperCase().includes(m.toUpperCase()));
         const nextYearMatch = nextJoined.match(/\b(20\d{2})\b/);
-        const looksLikeHeader = !!(nextMonthMatch && nextYearMatch && nextRow.length <= 2);
-        if (isDayRow(nextRow).ok || looksLikeHeader) break;
+        const looksLikeHeader = !!(nextMonthMatch && nextYearMatch && nonBlankCount(nextRow) <= 2);
+        if (isDayRow(nextRow, weekdayCols).ok || looksLikeHeader) break;
         contentRows.push(nextRow);
         j++;
       }
 
       // Scan content rows for "<Name> Out" patterns, matched to the day column
       contentRows.forEach(cRow => {
-        cRow.forEach((cell, idx) => {
+        weekdayCols.forEach(idx => {
+          const cell = (cRow[idx] || "").trim();
           const m = cell.match(/^(.*?)\s+[Oo]ut\b/);
           if (m && dateByCol[idx] !== undefined) {
             const name = m[1].trim();
