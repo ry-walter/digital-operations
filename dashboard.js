@@ -169,10 +169,19 @@ function wireEventHandlers() {
   });
 }
 
+function futureOnly(pto) {
+  const today = todayISO();
+  const filtered = {};
+  Object.keys(pto).forEach(iso => {
+    if (iso >= today) filtered[iso] = pto[iso];
+  });
+  return filtered;
+}
+
 async function refreshDashboard() {
   const events = getEvents();
   const livePTO = await fetchLivePTO();
-  const pto = livePTO || getLocalPTO();
+  const pto = futureOnly(livePTO || getLocalPTO());
   liveActivePTO = !!livePTO;
   document.getElementById("live-indicator").textContent = liveActivePTO ? "LIVE SYS" : "LOCAL";
   renderStats(events, pto);
