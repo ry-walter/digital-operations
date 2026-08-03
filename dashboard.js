@@ -42,6 +42,7 @@ function groupEvents(events) {
 // tagged by their broadcast network in the category field; everything else
 // comes from the Airtable "NATION AIR TABLE" snapshot.
 const SPORTS_NETWORKS = ["FOX", "FOXE1", "FOXE2"];
+const DIGITAL_EXCLUSIVE_NETWORKS = ["FOXE1", "FOXE2"];
 function eventSourceBadge(ev) {
   const isSports = SPORTS_NETWORKS.includes((ev.category || "").trim());
   return isSports
@@ -53,6 +54,7 @@ function eventRowHTML(ev) {
   const d = parseISO(ev.date);
   const dayNum = String(d.getDate()).padStart(2,"0");
   const badge = eventSourceBadge(ev);
+  const isDigitalExclusive = DIGITAL_EXCLUSIVE_NETWORKS.includes((ev.category || "").trim());
   return `
   <div class="flex items-start gap-4 rounded-xl border border-zinc-200 bg-white p-4 group">
     <div class="flex h-12 w-12 flex-none items-center justify-center rounded-lg bg-red-50 text-red-800 font-semibold">
@@ -66,7 +68,10 @@ function eventRowHTML(ev) {
       <div class="font-medium text-zinc-900">${escapeHTML(ev.title)}</div>
       <div class="mt-0.5 text-xs text-zinc-500">${escapeHTML(ev.category || "")}</div>
     </div>
-    <span class="flex-none self-start rounded-full ${badge.classes} px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wide">${badge.label}</span>
+    <div class="flex flex-none flex-col items-end gap-1">
+      <span class="rounded-full ${badge.classes} px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wide">${badge.label}</span>
+      ${isDigitalExclusive ? `<span class="rounded-full bg-green-50 text-green-700 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wide">Digital Exclusive</span>` : ""}
+    </div>
     <button data-remove-event="${ev.date}|${encodeURIComponent(ev.title)}"
       class="opacity-0 group-hover:opacity-100 text-zinc-300 hover:text-red-600 transition">✕</button>
   </div>`;
