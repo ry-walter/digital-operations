@@ -121,9 +121,7 @@ function wireEventHandlers() {
     if (!title) return;
     const category = prompt("Category (e.g. Fox Nation Series, Live Stream)?", "Fox Nation Series") || "";
     const time = prompt("Time (optional, e.g. 7:00pm)?", "") || undefined;
-    const events = getEvents();
-    events.push({ date, title, category, time });
-    saveEvents(events);
+    addEvent({ date, title, category, time });
     refreshDashboard();
   });
 
@@ -132,9 +130,7 @@ function wireEventHandlers() {
     if (!btn) return;
     const [date, encTitle] = btn.getAttribute("data-remove-event").split("|");
     const title = decodeURIComponent(encTitle);
-    let events = getEvents();
-    events = events.filter(ev => !(ev.date === date && ev.title === title));
-    saveEvents(events);
+    removeEvent(date, title);
     refreshDashboard();
   });
 

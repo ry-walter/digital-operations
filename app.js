@@ -1,6 +1,8 @@
 /* FOX NATION DASHBOARD — SHARED APP LOGIC */
 
-const LS_EVENTS = "fnd_events_v1";
+const LS_EVENTS = "fnd_events_v1"; // legacy full-snapshot key (migrated away from)
+const LS_EVENTS_ADDED = "fnd_events_added_v1";
+const LS_EVENTS_REMOVED = "fnd_events_removed_v1";
 const LS_PTO = "fnd_pto_v1";
 const LS_HUDDLE = "fnd_huddle_v1";
 
@@ -47,15 +49,43 @@ function saveJSON(key, value) {
   localStorage.setItem(key, JSON.stringify(value));
 }
 
+// Events are stored as an OVERLAY on top of SEED_EVENTS (from data.js), not a
+// full snapshot copy. This means updating SEED_EVENTS (e.g. re-syncing from
+// Airtable) always takes effect immediately for every visitor — only the
+// user's own manual additions/removals are persisted in localStorage.
+function eventKey(ev) { return `${ev.date}|${ev.title}`; }
+
 function getEvents() {
-  let events = loadJSON(LS_EVENTS, null);
-  if (!events) {
-    events = SEED_EVENTS.slice();
-    saveJSON(LS_EVENTS, events);
+  // One-time migration: drop the old full-snapshot key if present so it
+  // can never mask updated SEED_EVENTS data again.
+  if (localStorage.getItem(LS_EVENTS) !== null) {
+    localStorage.removeItem(LS_EVENTS);
   }
-  return events;
+  const added = loadJSON(LS_EVENTS_ADDED, []);
+  const removed = new Set(loadJSON(LS_EVENTS_REMOVED, []));
+  const base = SEED_EVENTS.filter(ev => !removed.has(eventKey(ev)));
+  return base.concat(added);
 }
-function saveEvents(events) { saveJSON(LS_EVENTS, events); }
+
+function addEvent(ev) {
+  const added = loadJSON(LS_EVENTS_ADDED, []);
+  added.push(ev);
+  saveJSON(LS_EVENTS_ADDED, added);
+}
+
+function removeEvent(date, title) {
+  const isSeed = SEED_EVENTS.some(ev => ev.date === date && ev.title === title);
+  if (isSeed) {
+    const removed = loadJSON(LS_EVENTS_REMOVED, []);
+    const key = `${date}|${title}`;
+    if (!removed.includes(key)) removed.push(key);
+    saveJSON(LS_EVENTS_REMOVED, removed);
+  } else {
+    let added = loadJSON(LS_EVENTS_ADDED, []);
+    added = added.filter(ev => !(ev.date === date && ev.title === title));
+    saveJSON(LS_EVENTS_ADDED, added);
+  }
+}
 
 function getLocalPTO() {
   let pto = loadJSON(LS_PTO, null);
