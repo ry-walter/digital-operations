@@ -96,7 +96,38 @@ const SEED_EVENTS = [
   { date: "2026-09-04", title: "Paul Mauro's Notes From Ground Zero", category: "Special" },
   { date: "2026-09-04", title: "3:00pm The Weekly Rap Sheet with Paul Mauro", category: "Live Stream" },
   { date: "2026-09-04", title: "TBD TIME: RAF Moscow Press Conference", category: "Live Stream" },
-  { date: "2026-09-05", title: "TBD TIME: RAF Moscow", category: "Live Stream" }
+  { date: "2026-09-05", title: "TBD TIME: RAF Moscow", category: "Live Stream" },
+
+  // --- FOX Sports events (manual snapshot from "High Profile Sporting
+  // Events" Google Sheet, Current Schedule tab, as of 2026-08-03).
+  // Filtered to Network = FOX / FOXE1 / FOXE2 only. Re-upload a fresh CSV
+  // export of that tab whenever the schedule changes.
+  { date: "2026-08-05", title: "7:30 AM: Amistoso Internacional - Chelsea FC v Juventus FC", category: "FOXE1" },
+  { date: "2026-08-05", title: "2:00 PM: Amistoso Internacional - RCD Mallorca v Paris Saint-Germain FC", category: "FOXE1" },
+  { date: "2026-08-05", title: "4:00 PM: Fox Noticias En Fox Deportes", category: "FOXE2" },
+  { date: "2026-08-06", title: "1:00 PM: LIV Golf - New York: Round 1", category: "FOXE1" },
+  { date: "2026-08-07", title: "12:00 PM: LIV Golf - New York: Round 2", category: "FOXE1" },
+  { date: "2026-08-07", title: "2:00 PM: LIV Golf - New York: Round 2", category: "FOX" },
+  { date: "2026-08-07", title: "4:30 PM: Saratoga Live", category: "FOXE2" },
+  { date: "2026-08-08", title: "7:00 AM: Amistoso Internacional - Juventus FC v FC Internazionale Milano", category: "FOXE1" },
+  { date: "2026-08-08", title: "12:00 PM: LIV Golf - New York: Round 3", category: "FOX" },
+  { date: "2026-08-08", title: "5:00 PM: Fox Saratoga Saturday: The Whitney Stakes", category: "FOX" },
+  { date: "2026-08-08", title: "6:00 PM: Liga Profesional De Fútbol Argentino - Boca Juniors v Vélez Sarsfield", category: "FOXE1" },
+  { date: "2026-08-08", title: "7:00 PM: MLB on FOX - Detroit Tigers at San Francisco Giants", category: "FOX" },
+  { date: "2026-08-08", title: "7:00 PM: MLB on FOX - Baltimore Orioles at Texas Rangers", category: "FOX" },
+  { date: "2026-08-08", title: "7:00 PM: MLB on FOX - Cleveland Guardians at Chicago White Sox", category: "FOX" },
+  { date: "2026-08-08", title: "9:00 PM: Liga MX Femenil - Club Necaxa v Pumas UNAM", category: "FOXE1" },
+  { date: "2026-08-08", title: "9:30 PM: Liga Dimayor Colombia - Deportivo Pasto v Deportivo Cali", category: "FOXE2" },
+  { date: "2026-08-09", title: "8:00 AM: Amistoso Internacional - Chelsea FC v Johor Darul Ta'zim FC", category: "FOXE1" },
+  { date: "2026-08-09", title: "11:00 AM: LIV Golf - New York: Round 4", category: "FOX" },
+  { date: "2026-08-09", title: "4:00 PM: INDYCAR NICS Racing - Portland", category: "FOX" },
+  { date: "2026-08-15", title: "3:00 PM: Fox Saratoga Saturday: Christophe Clement Turf Stakes", category: "FOX" },
+  { date: "2026-08-15", title: "7:00 PM: MLB on FOX - Arizona Diamondbacks at Atlanta Braves", category: "FOX" },
+  { date: "2026-08-15", title: "7:00 PM: MLB on FOX - Boston Red Sox at Pittsburgh Pirates", category: "FOX" },
+  { date: "2026-08-15", title: "7:00 PM: MLB on FOX - Milwaukee Brewers at Los Angeles Dodgers", category: "FOX" },
+  { date: "2026-08-15", title: "9:00 PM: Liga MX Femenil - Tigres UANL v FC Juárez", category: "FOXE1" },
+  { date: "2026-08-16", title: "12:00 PM: INDYCAR NICS Racing - Markham", category: "FOX" },
+  { date: "2026-08-16", title: "7:00 PM: Liga MX Femenil - Chivas de Guadalajara v Atlético de San Luis", category: "FOXE1" }
 ];
 
 // date -> array of names on PTO that day
