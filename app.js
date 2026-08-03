@@ -1,4 +1,4 @@
-/* FOX NATION DASHBOARD — SHARED APP LOGIC */
+/* FOX NATION DASHBOARD - SHARED APP LOGIC */
 
 const LS_EVENTS = "fnd_events_v1";
 const LS_PTO = "fnd_pto_v1";
