@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>FOX Nation Dashboard — Huddle Notes</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, sans-serif; }
+</style>
+</head>
+<body class="min-h-screen bg-zinc-50">
+  <div class="flex min-h-screen">
+    <!-- Sidebar -->
+    <aside class="w-60 flex-none bg-zinc-900 text-white">
+      <div class="flex items-center gap-2 px-5 py-5">
+        <div class="flex h-8 w-8 items-center justify-center rounded-lg bg-red-700 font-bold">F</div>
+        <span class="font-semibold tracking-wide">FOX NATION</span>
+      </div>
+      <nav class="mt-2 space-y-1 px-3">
+        <a href="index.html" data-nav="dashboard" class="flex items-center gap-2 rounded-lg px-3 py-2 text-sm text-zinc-300 hover:bg-zinc-800">
+          <span>▦</span> Dashboard
+        </a>
+        <a href="huddle.html" data-nav="huddle" class="flex items-center gap-2 rounded-lg px-3 py-2 text-sm text-zinc-300 hover:bg-zinc-800">
+          <span>💬</span> Huddle Notes
+        </a>
+      </nav>
+    </aside>
+
+    <!-- Main -->
+    <main class="flex-1">
+      <header class="flex items-center justify-between border-b border-zinc-200 bg-white px-8 py-4">
+        <h1 class="text-lg font-semibold text-zinc-900">Huddle Notes</h1>
+        <span class="flex items-center gap-1.5 rounded-full bg-zinc-100 px-3 py-1 text-xs font-medium text-zinc-600">
+          <span class="h-2 w-2 rounded-full bg-green-500"></span> LOCAL
+        </span>
+      </header>
+
+      <div class="p-8">
+        <div class="mb-6 flex items-center justify-between">
+          <div>
+            <h2 class="text-xl font-semibold text-zinc-900">Huddle Notes</h2>
+            <p class="mt-1 text-sm text-zinc-500">Capture and sync daily operational updates.</p>
+          </div>
+          <div class="flex items-center gap-3 rounded-xl border border-zinc-200 bg-white px-3 py-2">
+            <button id="huddle-prev" class="text-zinc-400 hover:text-zinc-700">←</button>
+            <span id="huddle-date-label" class="text-sm font-medium text-zinc-800"></span>
+            <button id="huddle-next" class="text-zinc-400 hover:text-zinc-700">→</button>
+          </div>
+        </div>
+
+        <div id="huddle-cards" class="grid grid-cols-1 gap-4 md:grid-cols-3"></div>
+      </div>
+    </main>
+  </div>
+
+  <script src="config.js"></script>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+  <script src="huddle.js"></script>
+</body>
+</html>
