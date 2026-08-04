@@ -28,4 +28,4 @@ const PTO_CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRSOgVRHKZa
  * -----------------------------------------------------------------
  */
 
-const HUDDLE_API_URL = "";
+const HUDDLE_API_URL = "https://script.google.com/macros/s/AKfycbzS5PN1MdmdJ350qSYAQKSy3v-b4dNGbnuWltz0Hp8ywS3738FXW0ZCM_3hjsVo23eD/exec";
