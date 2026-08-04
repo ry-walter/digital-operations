@@ -167,12 +167,6 @@ const SEED_PTO = {
 };
 
 // Seed huddle notes: { "YYYY-MM-DD": { "10:00 AM": "text", "4:00 PM": "text", "8:15 PM": "text" } }
-const SEED_HUDDLE_NOTES = {
-  "2026-08-03": {
-    "10:00 AM": "- Big plus season started today\n- Stay ahead of the Nation schedule and VOD postings\n- Team needs to stay on top of sweeps\n- Scheduler should be in everyone's OKTA accounts\n- Nation Jira Cloud rollout postponed",
-    "4:00 PM": "",
-    "8:15 PM": ""
-  }
-};
+const SEED_HUDDLE_NOTES = {};
 
 const HUDDLE_SLOTS = ["10:00 AM", "4:00 PM", "8:15 PM"];

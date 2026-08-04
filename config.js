@@ -12,4 +12,20 @@
  * -----------------------------------------------------------------
  */
 
-const PTO_CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRS0gVRHKZaDCXjQqXYiIYeXF0aGQsiUnPFD8HxUyKtBTmteLhqfdX8XKcnduUEX65d5wtMpg_mFyLS/pub?gid=935647697&single=true&output=csv";
+const PTO_CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRSOgVRHKZaDCXjQqXYilYeXFOaGQsiUnPFD8HxUyKtBTmteLhqfdX8XKcnduUEX65d5wtMpg_mFyLS/pub?gid=935647697&single=true&output=csv";
+
+/*
+ * HUDDLE NOTES — shared backend (Google Apps Script Web App URL)
+ * -----------------------------------------------------------------
+ * Deploy the Apps Script bound to a Google Sheet (see README) and paste
+ * the resulting /exec Web App URL below. Once set, Huddle Notes are
+ * read from and written to that shared sheet for every visitor, with
+ * localStorage used only as an offline fallback/cache. Leave blank to
+ * keep Huddle Notes local-only (each browser separate, not shared).
+ *
+ * Example:
+ * const HUDDLE_API_URL = "https://script.google.com/macros/s/AKfycb.../exec";
+ * -----------------------------------------------------------------
+ */
+
+const HUDDLE_API_URL = "";

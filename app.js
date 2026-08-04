@@ -260,6 +260,41 @@ async function fetchLivePTO() {
   }
 }
 
+// ---------- shared Huddle Notes backend (Google Apps Script) ----------
+// Reads/writes go through a small Apps Script Web App bound to a Google
+// Sheet (see README for setup). Using text/plain as the POST content type
+// keeps these as CORS "simple requests" so no server-side CORS headers
+// are required from Apps Script.
+async function fetchRemoteHuddleNotes() {
+  if (!HUDDLE_API_URL) return null;
+  try {
+    const res = await fetch(HUDDLE_API_URL, { cache: "no-store" });
+    if (!res.ok) throw new Error("Huddle fetch failed: " + res.status);
+    const data = await res.json();
+    if (!data || data.ok !== true) throw new Error("Huddle fetch returned an error");
+    return data.notes || {};
+  } catch (e) {
+    console.warn("Live Huddle Notes fetch failed, falling back to local data:", e);
+    return null;
+  }
+}
+
+async function saveRemoteHuddleNote(date, slot, note) {
+  if (!HUDDLE_API_URL) return false;
+  try {
+    const res = await fetch(HUDDLE_API_URL, {
+      method: "POST",
+      headers: { "Content-Type": "text/plain;charset=utf-8" },
+      body: JSON.stringify({ date, slot, note })
+    });
+    if (!res.ok) throw new Error("Huddle save failed: " + res.status);
+    return true;
+  } catch (e) {
+    console.warn("Saving huddle note to shared backend failed:", e);
+    return false;
+  }
+}
+
 // ---------- sidebar active state ----------
 function markActiveNav() {
   const path = window.location.pathname;
