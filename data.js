@@ -2,7 +2,7 @@
  * FOX NATION DASHBOARD — DATA
  * -----------------------------------------------------------------
  * EVENTS: manual snapshot pulled from the Airtable "NATION AIR TABLE"
- *   (appYVkKcbQKscED3w) as of 2026-08-04. Update this array by hand
+ *   (appYVkKcbQKscED3w) as of 2026-08-05. Update this array by hand
  *   whenever the Airtable calendar changes — just add/edit/remove
  *   objects below. Each event: { date: "YYYY-MM-DD", title, category, time? }
  *
@@ -72,9 +72,13 @@ const SEED_EVENTS = [
   { date: "2026-08-05", title: "4:30pm: The President delivers remarks at Red Rock Casino Resort and Spa", category: "Live Stream" },
   { date: "2026-08-05", title: "A Trace Gallagher Interview with Pres Trump", category: "Fox Nation" },
   { date: "2026-08-05", title: "3:00pm: Secretary Robert F. Kennedy, Jr. press conference announcing a new health care reform action", category: "Live Stream" },
+  { date: "2026-08-05", title: "10:00am: VPOTUS on-camera remarks ahead of a roundtable discussion on fraud.", category: "Live Stream" },
+  { date: "2026-08-05", title: "11:00am: The Departments of Justice and State with Law Enforcement Partners press conference to announce the latest enforcement efforts to eliminate Cartel Jalisco Nueva Generación", category: "Live Stream" },
+  { date: "2026-08-05", title: "A Laura Ingraham Interview with VP Vance", category: "Fox Nation" },
   { date: "2026-08-06", title: "Final Flight: The Men of Extortion 17", category: "Series,Fox Nation" },
+  { date: "2026-08-06", title: "10:00am: Senate Fauci Contempt Vote", category: "Live Stream" },
   { date: "2026-08-07", title: "COPs: Florida Man Special Season 3801-3803", category: "Series,Fox Nation" },
-  { date: "2026-08-07", title: "3:00pm The Weekly Rap Sheet with Paul Mauro", category: "Live Stream" },
+  { date: "2026-08-07", title: "2:00pm The Weekly Rap Sheet with Paul Mauro", category: "Live Stream" },
   { date: "2026-08-10", title: "Immaculate Concussion: Havana Syndrome", category: "Fox Nation" },
   { date: "2026-08-10", title: "9:00am: Lindsay Clancy Trial", category: "Live Stream" },
   { date: "2026-08-11", title: "Dirty Money with Brantley Gilbert", category: "Lifestyle" },
