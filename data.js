@@ -2,7 +2,7 @@
  * FOX NATION DASHBOARD — DATA
  * -----------------------------------------------------------------
  * EVENTS: manual snapshot pulled from the Airtable "NATION AIR TABLE"
- *   (appYVkKcbQKscED3w) as of 2026-08-05. Update this array by hand
+ *   (appYVkKcbQKscED3w) as of 2026-08-07. Update this array by hand
  *   whenever the Airtable calendar changes — just add/edit/remove
  *   objects below. Each event: { date: "YYYY-MM-DD", title, category, time? }
  *
@@ -76,9 +76,15 @@ const SEED_EVENTS = [
   { date: "2026-08-05", title: "11:00am: The Departments of Justice and State with Law Enforcement Partners press conference to announce the latest enforcement efforts to eliminate Cartel Jalisco Nueva Generación", category: "Live Stream" },
   { date: "2026-08-05", title: "A Laura Ingraham Interview with VP Vance", category: "Fox Nation" },
   { date: "2026-08-06", title: "Final Flight: The Men of Extortion 17", category: "Series,Fox Nation" },
-  { date: "2026-08-06", title: "10:00am: Senate Fauci Contempt Vote", category: "Live Stream" },
+  { date: "2026-08-06", title: "8:30am: Senate Fauci Contempt Vote", category: "Live Stream" },
+  { date: "2026-08-06", title: "12:55pm: Secretary Robert F. Kennedy, Jr. visits Susan Gray Head Start alongside Administration for Children and Families Assistant Secretary Alex Adams to meet with students, educators, and administrators", category: "Live Stream" },
+  { date: "2026-08-06", title: "TBD 3:00pm: The President participates in signing time", category: "Live Stream" },
+  { date: "2026-08-06", title: "7:00pm: The President participates in a Team USA Reception - Rose Garden", category: "Live Stream" },
   { date: "2026-08-07", title: "COPs: Florida Man Special Season 3801-3803", category: "Series,Fox Nation" },
   { date: "2026-08-07", title: "2:00pm The Weekly Rap Sheet with Paul Mauro", category: "Live Stream" },
+  { date: "2026-08-07", title: "3:00pm: President Trump hosts an American Mining Industry Roundtable at the Department of State", category: "Live Stream" },
+  { date: "2026-08-08", title: "A Kayleigh McEnany Interview with VP Vance", category: "Fox Nation" },
+  { date: "2026-08-09", title: "Live with Robert Jeffress and First Baptist Dallas (10:00 AM ET) WEEKLY", category: "Fox Nation" },
   { date: "2026-08-10", title: "Immaculate Concussion: Havana Syndrome", category: "Fox Nation" },
   { date: "2026-08-10", title: "9:00am: Lindsay Clancy Trial", category: "Live Stream" },
   { date: "2026-08-11", title: "Dirty Money with Brantley Gilbert", category: "Lifestyle" },
@@ -86,15 +92,18 @@ const SEED_EVENTS = [
   { date: "2026-08-14", title: "COPs: Florida Man Special Season 3804", category: "Series,Fox Nation" },
   { date: "2026-08-14", title: "3:00pm The Weekly Rap Sheet with Paul Mauro", category: "Live Stream" },
   { date: "2026-08-14", title: "TBD TIME: Alex Murdaugh Pretrial Hearing", category: "Live Stream" },
+  { date: "2026-08-16", title: "Live with Robert Jeffress and First Baptist Dallas (10:00 AM ET) WEEKLY", category: "Fox Nation" },
   { date: "2026-08-17", title: "The Earhart Files", category: "Special,Fox Nation" },
   { date: "2026-08-17", title: "9:00am: Lindsay Clancy Trial", category: "Live Stream" },
-  { date: "2026-08-19", title: "Russia! Russia! Russia! The Plot to Stop Trump", category: "Series" },
+  { date: "2026-08-19", title: "Unauthorized History Of Socialism", category: "Fox Nation" },
   { date: "2026-08-20", title: "GOD. FAMILY. FOOTBALL. (S3)", category: "Fox Nation" },
   { date: "2026-08-21", title: "COPs: Florida Man Special Season 3805", category: "Series,Fox Nation" },
   { date: "2026-08-21", title: "2:45pm: RAF12- Cleveland Press Conference", category: "Live Stream" },
   { date: "2026-08-21", title: "3:00pm The Weekly Rap Sheet with Paul Mauro", category: "Live Stream" },
+  { date: "2026-08-21", title: "Who is Hassan Piker?", category: "Fox Nation" },
   { date: "2026-08-22", title: "7:45pm: RAF12- Cleveland", category: "Live Stream" },
   { date: "2026-08-23", title: "2:00pm: RAF Next Gen 02", category: "Live Stream" },
+  { date: "2026-08-23", title: "Live with Robert Jeffress and First Baptist Dallas (10:00 AM ET) WEEKLY", category: "Fox Nation" },
   { date: "2026-08-24", title: "Operation Homeland", category: "Fox Nation" },
   { date: "2026-08-24", title: "9:00am: Lindsay Clancy Trial", category: "Live Stream" },
   { date: "2026-08-26", title: "Ambush at ABBEY GATE", category: "Fox Nation ,Special" },
@@ -102,6 +111,7 @@ const SEED_EVENTS = [
   { date: "2026-08-28", title: "COPs: Season 38 Episode 6", category: "Series,Fox Nation" },
   { date: "2026-08-28", title: "3:00pm The Weekly Rap Sheet with Paul Mauro", category: "Live Stream" },
   { date: "2026-08-29", title: "TBD TIME: TPUSA Make Heaven Crowded Tour- EL PASO, TX", category: "Live Stream" },
+  { date: "2026-08-30", title: "Live with Robert Jeffress and First Baptist Dallas (10:00 AM ET) WEEKLY", category: "Fox Nation" },
   { date: "2026-08-31", title: "Lockerbie: Justice for Pan Am 103", category: "Fox Nation ,Series" },
   { date: "2026-09-01", title: "The Enemy on Campus w/ Maria Bartiromo", category: "Fox Nation" },
   { date: "2026-09-01", title: "12:00pm: Tyler Robinson Oral Arguments", category: "Live Stream" },
