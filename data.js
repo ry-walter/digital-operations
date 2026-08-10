@@ -2,7 +2,7 @@
  * FOX NATION DASHBOARD — DATA
  * -----------------------------------------------------------------
  * EVENTS: manual snapshot pulled from the Airtable "NATION AIR TABLE"
- *   (appYVkKcbQKscED3w) as of 2026-08-07. Update this array by hand
+ *   (appYVkKcbQKscED3w) as of 2026-08-10. Update this array by hand
  *   whenever the Airtable calendar changes — just add/edit/remove
  *   objects below. Each event: { date: "YYYY-MM-DD", title, category, time? }
  *
@@ -84,10 +84,18 @@ const SEED_EVENTS = [
   { date: "2026-08-07", title: "2:00pm The Weekly Rap Sheet with Paul Mauro", category: "Live Stream" },
   { date: "2026-08-07", title: "3:00pm: President Trump hosts an American Mining Industry Roundtable at the Department of State", category: "Live Stream" },
   { date: "2026-08-08", title: "A Kayleigh McEnany Interview with VP Vance", category: "Fox Nation" },
+  { date: "2026-08-08", title: "A Lara Trump Interview with Sec Mullin", category: "Fox Nation" },
   { date: "2026-08-09", title: "Live with Robert Jeffress and First Baptist Dallas (10:00 AM ET) WEEKLY", category: "Fox Nation" },
   { date: "2026-08-10", title: "Immaculate Concussion: Havana Syndrome", category: "Fox Nation" },
   { date: "2026-08-10", title: "9:00am: Lindsay Clancy Trial", category: "Live Stream" },
+  { date: "2026-08-10", title: "11:00am: HHS Secretary Robert F. Kennedy, Jr. hosting major food policy celebration recognizing \"a series of landmark actions to improve the nation's food supply and advance the Make America Healthy Again agenda", category: "Live Stream" },
+  { date: "2026-08-10", title: "12:20pm: Sec. Hegseth travels Monday to participate in the renaming of Joint Base Charleston to Joint Base Lindsey Graham.", category: "Live Stream" },
+  { date: "2026-08-10", title: "TBD 2:00pm: Pres Trump participates in a Swearing-In Ceremony for the United States Attorney General", category: "Live Stream" },
+  { date: "2026-08-10", title: "TBD 2:45pm: Pres Trump signs executive orders", category: "Live Stream" },
+  { date: "2026-08-10", title: "A F&F Interview with Darline Graham", category: "Fox Nation" },
+  { date: "2026-08-10", title: "4:00pm: DOJ clap-in event for AG Blanche today", category: "Live Stream" },
   { date: "2026-08-11", title: "Dirty Money with Brantley Gilbert", category: "Lifestyle" },
+  { date: "2026-08-11", title: "9:00am: U.S. Transportation Secretary Sean P. Duffy and FAA Administrator Bryan Bedford will be at Newark Liberty International Airport for the installation of a new surface movement radar", category: "Live Stream" },
   { date: "2026-08-13", title: "GOD. FAMILY. FOOTBALL. (S3)", category: "Fox Nation" },
   { date: "2026-08-14", title: "COPs: Florida Man Special Season 3804", category: "Series,Fox Nation" },
   { date: "2026-08-14", title: "3:00pm The Weekly Rap Sheet with Paul Mauro", category: "Live Stream" },
@@ -95,7 +103,7 @@ const SEED_EVENTS = [
   { date: "2026-08-16", title: "Live with Robert Jeffress and First Baptist Dallas (10:00 AM ET) WEEKLY", category: "Fox Nation" },
   { date: "2026-08-17", title: "The Earhart Files", category: "Special,Fox Nation" },
   { date: "2026-08-17", title: "9:00am: Lindsay Clancy Trial", category: "Live Stream" },
-  { date: "2026-08-19", title: "Unauthorized History Of Socialism", category: "Fox Nation" },
+  { date: "2026-08-19", title: "(NEW EP) Unauthorized History Of Socialism", category: "Fox Nation" },
   { date: "2026-08-20", title: "GOD. FAMILY. FOOTBALL. (S3)", category: "Fox Nation" },
   { date: "2026-08-21", title: "COPs: Florida Man Special Season 3805", category: "Series,Fox Nation" },
   { date: "2026-08-21", title: "2:45pm: RAF12- Cleveland Press Conference", category: "Live Stream" },
@@ -113,7 +121,7 @@ const SEED_EVENTS = [
   { date: "2026-08-29", title: "TBD TIME: TPUSA Make Heaven Crowded Tour- EL PASO, TX", category: "Live Stream" },
   { date: "2026-08-30", title: "Live with Robert Jeffress and First Baptist Dallas (10:00 AM ET) WEEKLY", category: "Fox Nation" },
   { date: "2026-08-31", title: "Lockerbie: Justice for Pan Am 103", category: "Fox Nation ,Series" },
-  { date: "2026-09-01", title: "The Enemy on Campus w/ Maria Bartiromo", category: "Fox Nation" },
+  { date: "2026-09-01", title: "The Enemy on Campus w/ Maria Bartiromo", category: "Documentary" },
   { date: "2026-09-01", title: "12:00pm: Tyler Robinson Oral Arguments", category: "Live Stream" },
   { date: "2026-09-01", title: "TBD 7:00pm: The Murder of Charlie Kirk LIVE SHOW", category: "Live Stream" },
   { date: "2026-09-03", title: "GOD. FAMILY. FOOTBALL. (S3)", category: "Fox Nation" },
@@ -122,6 +130,11 @@ const SEED_EVENTS = [
   { date: "2026-09-04", title: "3:00pm The Weekly Rap Sheet with Paul Mauro", category: "Live Stream" },
   { date: "2026-09-04", title: "TBD TIME: RAF Moscow Press Conference", category: "Live Stream" },
   { date: "2026-09-05", title: "TBD TIME: RAF Moscow", category: "Live Stream" },
+  { date: "2026-09-06", title: "RAF Next Gen 03", category: "Live Stream" },
+  { date: "2026-09-07", title: "Born on 9/11: 25 Years Later with Harris Faulkner", category: "Special" },
+  { date: "2026-09-08", title: "Murder on Deck 8: Who Killed Anna Kepner?", category: "Special" },
+  { date: "2026-09-09", title: "Midterm Convention in Dallas, TX", category: "Live Stream" },
+  { date: "2026-09-10", title: "GOD. FAMILY. FOOTBALL. (S3)", category: "Fox Nation" },
   // --- FOX Sports events (manual snapshot from "High Profile Sporting
   // Events" Google Sheet, Current Schedule tab, as of 2026-08-07).
   // Filtered to Network = FOX / FOXE1 / FOXE2 only. Re-upload a fresh CSV
