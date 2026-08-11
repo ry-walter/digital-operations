@@ -142,10 +142,11 @@ const SEED_EVENTS = [
   { date: "2026-09-11", title: "TBD: 9/11 Coverage", category: "Live Stream" },
   { date: "2026-09-14", title: "TOXIC 2", category: "Special" },
   // --- FOX Sports events (manual snapshot from "High Profile Sporting
-  // Events" Google Sheet, Current Schedule tab, as of 2026-08-10).
+  // Events" Google Sheet, Current Schedule tab, as of 2026-08-11).
   // Filtered to Network = FOX / FOXE1 / FOXE2 only. Re-upload a fresh CSV
   // export of that tab whenever the schedule changes.
   { date: "2026-08-12", title: "2:30 PM: Amistoso Internacional - Manchester United FC v Leeds United FC", category: "FOXE1" },
+  { date: "2026-08-12", title: "4:00 PM: Fox Noticias En Fox Deportes", category: "FOXE2" },
   { date: "2026-08-14", title: "1:00 PM: Saratoga Live", category: "FOXE1" },
   { date: "2026-08-15", title: "1:30 PM: Amistoso Internacional - FC Internacional Milano v Real Betis", category: "FOXE1" },
   { date: "2026-08-15", title: "3:00 PM: Fox Saratoga Saturday: Christophe Clement Turf Stakes", category: "FOX" },
