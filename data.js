@@ -2,7 +2,7 @@
  * FOX NATION DASHBOARD — DATA
  * -----------------------------------------------------------------
  * EVENTS: manual snapshot pulled from the Airtable "NATION AIR TABLE"
- *   (appYVkKcbQKscED3w) as of 2026-08-10. Update this array by hand
+ *   (appYVkKcbQKscED3w) as of 2026-08-11. Update this array by hand
  *   whenever the Airtable calendar changes — just add/edit/remove
  *   objects below. Each event: { date: "YYYY-MM-DD", title, category, time? }
  *
@@ -95,7 +95,10 @@ const SEED_EVENTS = [
   { date: "2026-08-10", title: "A F&F Interview with Darline Graham", category: "Fox Nation" },
   { date: "2026-08-10", title: "4:00pm: DOJ clap-in event for AG Blanche today", category: "Live Stream" },
   { date: "2026-08-11", title: "Dirty Money with Brantley Gilbert", category: "Lifestyle" },
-  { date: "2026-08-11", title: "9:00am: U.S. Transportation Secretary Sean P. Duffy and FAA Administrator Bryan Bedford will be at Newark Liberty International Airport for the installation of a new surface movement radar", category: "Live Stream" },
+  { date: "2026-08-11", title: "TBD 9:00am: U.S. Transportation Secretary Sean P. Duffy and FAA Administrator Bryan Bedford will be at Newark Liberty International Airport for the installation of a new surface movement radar", category: "Live Stream" },
+  { date: "2026-08-11", title: "3:50pm: Pres Trump leaves JBA for Ohio", category: "Live Stream" },
+  { date: "2026-08-11", title: "TBD 7:00pm: FREEDOM 250: The President attends the 2026 Patriot Games Finale", category: "Live Stream" },
+  { date: "2026-08-11", title: "11:30am: FL US Atty Gregory W. Kehoe announces arrest of foreign terror suspects", category: "Live Stream" },
   { date: "2026-08-13", title: "GOD. FAMILY. FOOTBALL. (S3)", category: "Fox Nation" },
   { date: "2026-08-14", title: "COPs: Florida Man Special Season 3804", category: "Series,Fox Nation" },
   { date: "2026-08-14", title: "3:00pm The Weekly Rap Sheet with Paul Mauro", category: "Live Stream" },
@@ -135,6 +138,9 @@ const SEED_EVENTS = [
   { date: "2026-09-08", title: "Murder on Deck 8: Who Killed Anna Kepner?", category: "Special" },
   { date: "2026-09-09", title: "Midterm Convention in Dallas, TX", category: "Live Stream" },
   { date: "2026-09-10", title: "GOD. FAMILY. FOOTBALL. (S3)", category: "Fox Nation" },
+  { date: "2026-09-11", title: "COPs: Season 38 Episode 8", category: "Series,Fox Nation" },
+  { date: "2026-09-11", title: "TBD: 9/11 Coverage", category: "Live Stream" },
+  { date: "2026-09-14", title: "TOXIC 2", category: "Special" },
   // --- FOX Sports events (manual snapshot from "High Profile Sporting
   // Events" Google Sheet, Current Schedule tab, as of 2026-08-10).
   // Filtered to Network = FOX / FOXE1 / FOXE2 only. Re-upload a fresh CSV
