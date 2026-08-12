@@ -2,7 +2,7 @@
  * FOX NATION DASHBOARD — DATA
  * -----------------------------------------------------------------
  * EVENTS: manual snapshot pulled from the Airtable "NATION AIR TABLE"
- *   (appYVkKcbQKscED3w) as of 2026-08-11. Update this array by hand
+ *   (appYVkKcbQKscED3w) as of 2026-08-12. Update this array by hand
  *   whenever the Airtable calendar changes — just add/edit/remove
  *   objects below. Each event: { date: "YYYY-MM-DD", title, category, time? }
  *
@@ -99,6 +99,10 @@ const SEED_EVENTS = [
   { date: "2026-08-11", title: "3:50pm: Pres Trump leaves JBA for Ohio", category: "Live Stream" },
   { date: "2026-08-11", title: "TBD 7:00pm: FREEDOM 250: The President attends the 2026 Patriot Games Finale", category: "Live Stream" },
   { date: "2026-08-11", title: "11:30am: FL US Atty Gregory W. Kehoe announces arrest of foreign terror suspects", category: "Live Stream" },
+  { date: "2026-08-12", title: "TBD TIME: Secretary of War Pete Hegseth will travel to Panama tomorrow to deliver remarks at the Americas Counter Cartel Coalition (A3C) Forum", category: "Live Stream" },
+  { date: "2026-08-12", title: "TBD 2:30pm: Pres Trump participates in Signing Time", category: "Live Stream" },
+  { date: "2026-08-12", title: "1:00pm: DOJ presser on multiple Chinese national indictments, TBD arrests", category: "Live Stream" },
+  { date: "2026-08-12", title: "TBD 10:30am: The President participates in a Greeting with Law Enforcement and Military Service Members", category: "Live Stream" },
   { date: "2026-08-13", title: "GOD. FAMILY. FOOTBALL. (S3)", category: "Fox Nation" },
   { date: "2026-08-14", title: "COPs: Florida Man Special Season 3804", category: "Series,Fox Nation" },
   { date: "2026-08-14", title: "3:00pm The Weekly Rap Sheet with Paul Mauro", category: "Live Stream" },
@@ -106,17 +110,19 @@ const SEED_EVENTS = [
   { date: "2026-08-16", title: "Live with Robert Jeffress and First Baptist Dallas (10:00 AM ET) WEEKLY", category: "Fox Nation" },
   { date: "2026-08-17", title: "The Earhart Files", category: "Special,Fox Nation" },
   { date: "2026-08-17", title: "9:00am: Lindsay Clancy Trial", category: "Live Stream" },
+  { date: "2026-08-17", title: "9:30am: Justice Department holds a virtual meeting of the Religious Liberty Commission to finalize the Religious Liberty Commission report.", category: "Live Stream" },
   { date: "2026-08-19", title: "(NEW EP) Unauthorized History Of Socialism", category: "Fox Nation" },
   { date: "2026-08-20", title: "GOD. FAMILY. FOOTBALL. (S3)", category: "Fox Nation" },
   { date: "2026-08-21", title: "COPs: Florida Man Special Season 3805", category: "Series,Fox Nation" },
   { date: "2026-08-21", title: "2:45pm: RAF12- Cleveland Press Conference", category: "Live Stream" },
   { date: "2026-08-21", title: "3:00pm The Weekly Rap Sheet with Paul Mauro", category: "Live Stream" },
-  { date: "2026-08-21", title: "Who is Hassan Piker?", category: "Fox Nation" },
+  { date: "2026-08-21", title: "Who is Hasan Piker?", category: "Fox Nation" },
   { date: "2026-08-22", title: "7:45pm: RAF12- Cleveland", category: "Live Stream" },
   { date: "2026-08-23", title: "2:00pm: RAF Next Gen 02", category: "Live Stream" },
   { date: "2026-08-23", title: "Live with Robert Jeffress and First Baptist Dallas (10:00 AM ET) WEEKLY", category: "Fox Nation" },
   { date: "2026-08-24", title: "Operation Homeland", category: "Fox Nation" },
   { date: "2026-08-24", title: "9:00am: Lindsay Clancy Trial", category: "Live Stream" },
+  { date: "2026-08-24", title: "FOX BUSINESS IN DEPTH: COURSE CORRECTION", category: "Fox Nation" },
   { date: "2026-08-26", title: "Ambush at ABBEY GATE", category: "Fox Nation ,Special" },
   { date: "2026-08-27", title: "GOD. FAMILY. FOOTBALL. (S3)", category: "Fox Nation" },
   { date: "2026-08-28", title: "COPs: Season 38 Episode 6", category: "Series,Fox Nation" },
@@ -136,11 +142,14 @@ const SEED_EVENTS = [
   { date: "2026-09-06", title: "RAF Next Gen 03", category: "Live Stream" },
   { date: "2026-09-07", title: "Born on 9/11: 25 Years Later with Harris Faulkner", category: "Special" },
   { date: "2026-09-08", title: "Murder on Deck 8: Who Killed Anna Kepner?", category: "Special" },
-  { date: "2026-09-09", title: "Midterm Convention in Dallas, TX", category: "Live Stream" },
+  { date: "2026-09-09", title: "RNC Midterm Convention in Dallas, TX", category: "Live Stream" },
   { date: "2026-09-10", title: "GOD. FAMILY. FOOTBALL. (S3)", category: "Fox Nation" },
   { date: "2026-09-11", title: "COPs: Season 38 Episode 8", category: "Series,Fox Nation" },
   { date: "2026-09-11", title: "TBD: 9/11 Coverage", category: "Live Stream" },
   { date: "2026-09-14", title: "TOXIC 2", category: "Special" },
+  { date: "2026-09-16", title: "Unmasking a Monster: The Golden State Killer Ep 1-2", category: "History" },
+  { date: "2026-09-17", title: "GOD. FAMILY. FOOTBALL. (S3)", category: "Fox Nation" },
+  { date: "2026-09-17", title: "Who is Sophie Cunningham?", category: "Fox Nation" },
   // --- FOX Sports events (manual snapshot from "High Profile Sporting
   // Events" Google Sheet, Current Schedule tab, as of 2026-08-11).
   // Filtered to Network = FOX / FOXE1 / FOXE2 only. Re-upload a fresh CSV
