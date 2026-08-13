@@ -165,11 +165,9 @@ const SEED_EVENTS = [
   { date: "2026-09-20", title: "TBD TIME: TPUSA Make Heaven Crowded Tour- HONOLULU, HI", category: "Live Stream" },
   { date: "2026-09-20", title: "RAF Next Gen 04", category: "Live Stream" },
   // --- FOX Sports events (manual snapshot from "High Profile Sporting
-  // Events" Google Sheet, Current Schedule tab, as of 2026-08-11).
+  // Events" Google Sheet, Current Schedule tab, as of 2026-08-13).
   // Filtered to Network = FOX / FOXE1 / FOXE2 only. Re-upload a fresh CSV
   // export of that tab whenever the schedule changes.
-  { date: "2026-08-12", title: "2:30 PM: Amistoso Internacional - Manchester United FC v Leeds United FC", category: "FOXE1" },
-  { date: "2026-08-12", title: "4:00 PM: Fox Noticias En Fox Deportes", category: "FOXE2" },
   { date: "2026-08-14", title: "1:00 PM: Saratoga Live", category: "FOXE1" },
   { date: "2026-08-15", title: "1:30 PM: Amistoso Internacional - FC Internacional Milano v Real Betis", category: "FOXE1" },
   { date: "2026-08-15", title: "3:00 PM: Fox Saratoga Saturday: Christophe Clement Turf Stakes", category: "FOX" },
@@ -180,6 +178,7 @@ const SEED_EVENTS = [
   { date: "2026-08-15", title: "9:00 PM: Liga MX Femenil - Tigres UANL v FC Juárez", category: "FOXE1" },
   { date: "2026-08-16", title: "12:00 PM: INDYCAR NICS Racing - Markham", category: "FOX" },
   { date: "2026-08-20", title: "1:00 PM: LIV Golf - Indianapolis: Round 1", category: "FOXE1" },
+  { date: "2026-08-21", title: "12:00 PM: LIV Golf - Indianapolis: Round 2", category: "FOXE1" },
   { date: "2026-08-21", title: "2:00 PM: LIV Golf - Indianapolis: Round 2", category: "FOX" },
   { date: "2026-08-21", title: "6:00 PM: Bare Knuckle Fighting Championship - BKFC Fight Night - Bryce Henry v Carlos Trinidad", category: "FOXE1" },
   { date: "2026-08-22", title: "11:00 AM: LIV Golf - Indianapolis: Round 3", category: "FOX" },
