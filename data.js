@@ -2,7 +2,7 @@
  * FOX NATION DASHBOARD — DATA
  * -----------------------------------------------------------------
  * EVENTS: manual snapshot pulled from the Airtable "NATION AIR TABLE"
- *   (appYVkKcbQKscED3w) as of 2026-08-13. Update this array by hand
+ *   (appYVkKcbQKscED3w) as of 2026-08-14. Update this array by hand
  *   whenever the Airtable calendar changes — just add/edit/remove
  *   objects below. Each event: { date: "YYYY-MM-DD", title, category, time? }
  *
@@ -111,14 +111,19 @@ const SEED_EVENTS = [
   { date: "2026-08-13", title: "11:30am: FBI Detroit Most Wanted", category: "Live Stream" },
   { date: "2026-08-14", title: "COPs: Florida Man Special Season 3804", category: "Series,Fox Nation" },
   { date: "2026-08-14", title: "3:00pm The Weekly Rap Sheet with Paul Mauro", category: "Live Stream" },
-  { date: "2026-08-14", title: "TBD TIME: Alex Murdaugh Pretrial Hearing", category: "Live Stream" },
+  { date: "2026-08-14", title: "10:00am: Alex Murdaugh Pretrial Hearing", category: "Live Stream" },
+  { date: "2026-08-14", title: "TBD TIME: Luigi Mangione Fed Hearing Post Pressers", category: "Live Stream" },
+  { date: "2026-08-14", title: "2:30pm: NASA will hold a news conference to preview a new event at NASA Kennedy later this year tied to America’s 250th anniversary", category: "Live Stream" },
+  { date: "2026-08-14", title: "3:00pm: : President Trump delivers remarks at the Nassau County Police Academy Center for Training and Intelligence. Garden City, NY", category: "Live Stream" },
+  { date: "2026-08-14", title: "TBD 12:00pm: The President participates in Signing Time", category: "Live Stream" },
   { date: "2026-08-15", title: "A Lara Trump Interview with Avi Loeb- UAP Advisory Council", category: "Fox Nation" },
   { date: "2026-08-15", title: "A Lara Trump Interview with FL AG James Uthmeier", category: "Fox Nation" },
   { date: "2026-08-16", title: "Live with Robert Jeffress and First Baptist Dallas (10:00 AM ET) WEEKLY", category: "Fox Nation" },
   { date: "2026-08-17", title: "The Earhart Files", category: "Special,Fox Nation" },
   { date: "2026-08-17", title: "9:00am: Lindsay Clancy Trial", category: "Live Stream" },
   { date: "2026-08-17", title: "9:30am: Justice Department holds a virtual meeting of the Religious Liberty Commission to finalize the Religious Liberty Commission report", category: "Live Stream" },
-  { date: "2026-08-17", title: "TBD 11:30am: Nick Reiner Trust Hearing", category: "Live Stream" },
+  { date: "2026-08-17", title: "TBD 11:30am: Nick Reiner Trust Hearing Post Pressers", category: "Live Stream" },
+  { date: "2026-08-17", title: "12:30pm: Tupac Murder Trial Opening Arguments", category: "Live Stream" },
   { date: "2026-08-19", title: "(NEW EP) Unauthorized History Of Socialism", category: "Fox Nation" },
   { date: "2026-08-20", title: "GOD. FAMILY. FOOTBALL. (S3)", category: "Fox Nation" },
   { date: "2026-08-21", title: "COPs: Florida Man Special Season 3805", category: "Series,Fox Nation" },
@@ -164,6 +169,8 @@ const SEED_EVENTS = [
   { date: "2026-09-20", title: "The Next RAF Star Live", category: "Live Stream" },
   { date: "2026-09-20", title: "TBD TIME: TPUSA Make Heaven Crowded Tour- HONOLULU, HI", category: "Live Stream" },
   { date: "2026-09-20", title: "RAF Next Gen 04", category: "Live Stream" },
+  { date: "2026-09-21", title: "Man of Honor: The Michael Monsoor", category: "Special,Fox Nation" },
+  { date: "2026-09-23", title: "Unmasking a Monster: The Golden State Killer Ep 3-4", category: "History" },
   // --- FOX Sports events (manual snapshot from "High Profile Sporting
   // Events" Google Sheet, Current Schedule tab, as of 2026-08-13).
   // Filtered to Network = FOX / FOXE1 / FOXE2 only. Re-upload a fresh CSV
