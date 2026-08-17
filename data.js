@@ -2,7 +2,7 @@
  * FOX NATION DASHBOARD — DATA
  * -----------------------------------------------------------------
  * EVENTS: manual snapshot pulled from the Airtable "NATION AIR TABLE"
- *   (appYVkKcbQKscED3w) as of 2026-08-14. Update this array by hand
+ *   (appYVkKcbQKscED3w) as of 2026-08-17. Update this array by hand
  *   whenever the Airtable calendar changes — just add/edit/remove
  *   objects below. Each event: { date: "YYYY-MM-DD", title, category, time? }
  *
@@ -107,7 +107,7 @@ const SEED_EVENTS = [
   { date: "2026-08-13", title: "TBD 2:00pm: Pres Trump signs Executive Orders", category: "Live Stream" },
   { date: "2026-08-13", title: "TBD 3:00pm: Pres Trump signs signing time", category: "Live Stream" },
   { date: "2026-08-13", title: "TBD 3:20pm: U.S. Department of Health and Human Services (HHS) Secretary Robert F. Kennedy, Jr. will visit Castle Family Health Centers in Atwater, California, to meet with health center leadership and announce new funding opportunities.", category: "Live Stream" },
-  { date: "2026-08-13", title: "A Will Cain Interview with VP Vance", category: "Fox Nation" },
+  { date: "2026-08-13", title: "A Will Cain Interview with JD Vance", category: "Fox Nation" },
   { date: "2026-08-13", title: "11:30am: FBI Detroit Most Wanted", category: "Live Stream" },
   { date: "2026-08-14", title: "COPs: Florida Man Special Season 3804", category: "Series,Fox Nation" },
   { date: "2026-08-14", title: "3:00pm The Weekly Rap Sheet with Paul Mauro", category: "Live Stream" },
@@ -118,31 +118,39 @@ const SEED_EVENTS = [
   { date: "2026-08-14", title: "TBD 12:00pm: The President participates in Signing Time", category: "Live Stream" },
   { date: "2026-08-15", title: "A Lara Trump Interview with Avi Loeb- UAP Advisory Council", category: "Fox Nation" },
   { date: "2026-08-15", title: "A Lara Trump Interview with FL AG James Uthmeier", category: "Fox Nation" },
+  { date: "2026-08-15", title: "Seal Swim pkg", category: "Fox Nation" },
   { date: "2026-08-16", title: "Live with Robert Jeffress and First Baptist Dallas (10:00 AM ET) WEEKLY", category: "Fox Nation" },
   { date: "2026-08-17", title: "The Earhart Files", category: "Special,Fox Nation" },
   { date: "2026-08-17", title: "9:00am: Lindsay Clancy Trial", category: "Live Stream" },
   { date: "2026-08-17", title: "9:30am: Justice Department holds a virtual meeting of the Religious Liberty Commission to finalize the Religious Liberty Commission report", category: "Live Stream" },
   { date: "2026-08-17", title: "TBD 11:30am: Nick Reiner Trust Hearing Post Pressers", category: "Live Stream" },
-  { date: "2026-08-17", title: "12:30pm: Tupac Murder Trial Opening Arguments", category: "Live Stream" },
+  { date: "2026-08-17", title: "12:30pm: Tupac Murder Trial", category: "Live Stream" },
+  { date: "2026-08-17", title: "VOD 1:35pm: Secretary Robert F. Kennedy, Jr. will visit the Newton YMCA in Newton, IA alongside U.S. Rep. Mariannette Miller-Meeks (IA-01) to highlight efforts to improve children’s health through physical fitness, better nutrition, and strong community-based programs.", category: "Fox Nation" },
+  { date: "2026-08-17", title: "TBD 1:00pm: The President greets Lifeguard Ryder Williams - Oval Office", category: "Live Stream" },
+  { date: "2026-08-18", title: "10:00am: NHTSA hosts a \"Drive Sober or Get Pulled Over\" Kickoff Event", category: "Live Stream" },
   { date: "2026-08-19", title: "(NEW EP) Unauthorized History Of Socialism", category: "Fox Nation" },
   { date: "2026-08-20", title: "GOD. FAMILY. FOOTBALL. (S3)", category: "Fox Nation" },
   { date: "2026-08-21", title: "COPs: Florida Man Special Season 3805", category: "Series,Fox Nation" },
   { date: "2026-08-21", title: "2:45pm: RAF12- Cleveland Press Conference", category: "Live Stream" },
   { date: "2026-08-21", title: "3:00pm The Weekly Rap Sheet with Paul Mauro", category: "Live Stream" },
   { date: "2026-08-21", title: "Who is Hasan Piker?", category: "Fox Nation" },
+  { date: "2026-08-21", title: "Inside The Clancy Case", category: "Crime" },
   { date: "2026-08-22", title: "7:45pm: RAF12- Cleveland", category: "Live Stream" },
   { date: "2026-08-23", title: "2:00pm: RAF Next Gen 02", category: "Live Stream" },
   { date: "2026-08-23", title: "Live with Robert Jeffress and First Baptist Dallas (10:00 AM ET) WEEKLY", category: "Fox Nation" },
   { date: "2026-08-24", title: "Operation Homeland", category: "Fox Nation" },
   { date: "2026-08-24", title: "9:00am: Lindsay Clancy Trial", category: "Live Stream" },
   { date: "2026-08-24", title: "FOX BUSINESS IN DEPTH: COURSE CORRECTION", category: "Fox Nation" },
+  { date: "2026-08-24", title: "12:30pm: Tupac Murder Trial", category: "Live Stream" },
   { date: "2026-08-26", title: "Ambush at ABBEY GATE", category: "Fox Nation ,Special" },
   { date: "2026-08-27", title: "GOD. FAMILY. FOOTBALL. (S3)", category: "Fox Nation" },
   { date: "2026-08-28", title: "COPs: Season 38 Episode 6", category: "Series,Fox Nation" },
   { date: "2026-08-28", title: "3:00pm The Weekly Rap Sheet with Paul Mauro", category: "Live Stream" },
   { date: "2026-08-29", title: "TBD TIME: TPUSA Make Heaven Crowded Tour- EL PASO, TX", category: "Live Stream" },
+  { date: "2026-08-29", title: "A Kayleigh McEnany Townhall with RFK Jr", category: "Fox Nation" },
   { date: "2026-08-30", title: "Live with Robert Jeffress and First Baptist Dallas (10:00 AM ET) WEEKLY", category: "Fox Nation" },
   { date: "2026-08-31", title: "Lockerbie: Justice for Pan Am 103", category: "Fox Nation ,Series" },
+  { date: "2026-08-31", title: "12:30pm: Tupac Murder Trial", category: "Live Stream" },
   { date: "2026-09-01", title: "The Enemy on Campus w/ Maria Bartiromo", category: "Documentary" },
   { date: "2026-09-01", title: "12:00pm: Tyler Robinson Oral Arguments", category: "Live Stream" },
   { date: "2026-09-01", title: "TBD 7:00pm: The Murder of Charlie Kirk LIVE SHOW", category: "Live Stream" },
@@ -158,7 +166,6 @@ const SEED_EVENTS = [
   { date: "2026-09-11", title: "COPs: Season 38 Episode 8", category: "Series,Fox Nation" },
   { date: "2026-09-11", title: "TBD: 9/11 Coverage", category: "Live Stream" },
   { date: "2026-09-14", title: "TOXIC 2", category: "Special" },
-  { date: "2026-09-16", title: "Unmasking a Monster: The Golden State Killer Ep 1-2", category: "History" },
   { date: "2026-09-17", title: "GOD. FAMILY. FOOTBALL. (S3)", category: "Fox Nation" },
   { date: "2026-09-17", title: "Who is Sophie Cunningham?", category: "Fox Nation" },
   { date: "2026-09-18", title: "2:45pm: RAF Press Conference Miami", category: "Live Stream" },
@@ -170,7 +177,12 @@ const SEED_EVENTS = [
   { date: "2026-09-20", title: "TBD TIME: TPUSA Make Heaven Crowded Tour- HONOLULU, HI", category: "Live Stream" },
   { date: "2026-09-20", title: "RAF Next Gen 04", category: "Live Stream" },
   { date: "2026-09-21", title: "Man of Honor: The Michael Monsoor", category: "Special,Fox Nation" },
-  { date: "2026-09-23", title: "Unmasking a Monster: The Golden State Killer Ep 3-4", category: "History" },
+  { date: "2026-09-23", title: "Golden State Killer: Unmasking a Monster Ep 1-4", category: "History" },
+  { date: "2026-09-24", title: "Stories of the American Mafia Season 3", category: "Fox Nation" },
+  { date: "2026-09-24", title: "TBD TIME: Pray Vote Stand Summit", category: "Live Stream" },
+  { date: "2026-09-25", title: "COPs: Season 38 Episode 10", category: "Series,Fox Nation" },
+  { date: "2026-09-25", title: "2:00pm The Weekly Rap Sheet with Paul Mauro", category: "Live Stream" },
+  { date: "2026-09-26", title: "Grillin' Across America", category: "Series,Fox Nation" },
   // --- FOX Sports events (manual snapshot from "High Profile Sporting
   // Events" Google Sheet, Current Schedule tab, as of 2026-08-13).
   // Filtered to Network = FOX / FOXE1 / FOXE2 only. Re-upload a fresh CSV
