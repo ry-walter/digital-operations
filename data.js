@@ -184,35 +184,32 @@ const SEED_EVENTS = [
   { date: "2026-09-25", title: "2:00pm The Weekly Rap Sheet with Paul Mauro", category: "Live Stream" },
   { date: "2026-09-26", title: "Grillin' Across America", category: "Series,Fox Nation" },
   // --- FOX Sports events (manual snapshot from "High Profile Sporting
-  // Events" Google Sheet, Current Schedule tab, as of 2026-08-13).
+  // Events" Google Sheet, Current Schedule tab, as of 2026-08-17).
   // Filtered to Network = FOX / FOXE1 / FOXE2 only. Re-upload a fresh CSV
   // export of that tab whenever the schedule changes.
-  { date: "2026-08-14", title: "1:00 PM: Saratoga Live", category: "FOXE1" },
-  { date: "2026-08-15", title: "1:30 PM: Amistoso Internacional - FC Internacional Milano v Real Betis", category: "FOXE1" },
-  { date: "2026-08-15", title: "3:00 PM: Fox Saratoga Saturday: Christophe Clement Turf Stakes", category: "FOX" },
-  { date: "2026-08-15", title: "3:30 PM: Liga Profesional De Fútbol Argentino - Estudiantes v Gimnasia LP", category: "FOXE2" },
-  { date: "2026-08-15", title: "7:00 PM: MLB on FOX - Arizona Diamondbacks at Atlanta Braves", category: "FOX" },
-  { date: "2026-08-15", title: "7:00 PM: MLB on FOX - Boston Red Sox at Pittsburgh Pirates", category: "FOX" },
-  { date: "2026-08-15", title: "7:00 PM: MLB on FOX - Milwaukee Brewers at Los Angeles Dodgers", category: "FOX" },
-  { date: "2026-08-15", title: "9:00 PM: Liga MX Femenil - Tigres UANL v FC Juárez", category: "FOXE1" },
-  { date: "2026-08-16", title: "12:00 PM: INDYCAR NICS Racing - Markham", category: "FOX" },
+  { date: "2026-08-17", title: "4:00 PM: Fox Noticias En Fox Deportes", category: "FOXE2" },
   { date: "2026-08-20", title: "1:00 PM: LIV Golf - Indianapolis: Round 1", category: "FOXE1" },
+  { date: "2026-08-20", title: "4:00 PM: Fox Noticias En Fox Deportes", category: "FOXE2" },
   { date: "2026-08-21", title: "12:00 PM: LIV Golf - Indianapolis: Round 2", category: "FOXE1" },
   { date: "2026-08-21", title: "2:00 PM: LIV Golf - Indianapolis: Round 2", category: "FOX" },
-  { date: "2026-08-21", title: "6:00 PM: Bare Knuckle Fighting Championship - BKFC Fight Night - Bryce Henry v Carlos Trinidad", category: "FOXE1" },
+  { date: "2026-08-22", title: "10:30 AM: IROC Practice - Washington D.C.", category: "FOXE1" },
   { date: "2026-08-22", title: "11:00 AM: LIV Golf - Indianapolis: Round 3", category: "FOX" },
-  { date: "2026-08-22", title: "4:00 PM: Avca First Serve - Wisconsin vs Louisville", category: "FOX" },
-  { date: "2026-08-22", title: "5:30 PM: Liga Profesional De Fútbol Argentino - Independiente v Independiente Rivadavia", category: "FOXE1" },
+  { date: "2026-08-22", title: "12:30 PM: IROC Practice - Washington D.C.", category: "FOXE1" },
+  { date: "2026-08-22", title: "1:30 PM: Saratoga Live", category: "FOXE2" },
+  { date: "2026-08-22", title: "4:00 PM: Iroc Racing - Washington D.C. II", category: "FOXE1" },
+  { date: "2026-08-22", title: "4:00 PM: AVCA First Serve - Wisconsin vs Louisville", category: "FOX" },
+  { date: "2026-08-22", title: "5:00 PM: Saratoga Live", category: "FOXE2" },
   { date: "2026-08-22", title: "6:00 PM: Fox Saratoga Saturday: The Alabama Stakes", category: "FOX" },
+  { date: "2026-08-22", title: "7:00 PM: Liga Dimayor Colombia - Independiente Santa Fe v América de Cali", category: "FOXE1" },
   { date: "2026-08-22", title: "7:00 PM: MLB on FOX - San Francisco Giants at Boston Red Sox", category: "FOX" },
   { date: "2026-08-22", title: "7:00 PM: MLB on FOX - Chicago Cubs at Seattle Mariners", category: "FOX" },
   { date: "2026-08-22", title: "7:00 PM: MLB on FOX - Pittsburgh Pirates at Los Angeles Dodgers", category: "FOX" },
-  { date: "2026-08-22", title: "7:00 PM: Liga MX Femenil - FC Juárez v Santos Laguna", category: "FOXE1" },
   { date: "2026-08-23", title: "11:30 AM: INDYCAR NICS Racing Prerace - Washington D.C.", category: "FOX" },
   { date: "2026-08-23", title: "1:00 PM: INDYCAR NICS Racing - Washington D.C.", category: "FOX" },
+  { date: "2026-08-23", title: "2:00 PM: Saratoga Live", category: "FOXE1" },
   { date: "2026-08-23", title: "3:30 PM: LIV Golf - Indianapolis: Round 4", category: "FOX" },
   { date: "2026-08-23", title: "8:00 PM: NFL Preseason - Seattle Seahawks at Tennessee Titans", category: "FOX" },
-  { date: "2026-08-23", title: "8:00 PM: Liga MX Femenil - Club Necaxa v Club América", category: "FOXE1" },
+  { date: "2026-08-23", title: "8:00 PM: Liga MX Femenil - Club Necaxa v Club América", category: "FOXE2" },
   { date: "2026-08-23", title: "8:30 PM: Liga Profesional De Fútbol Argentino - Racing Club v Boca Juniors", category: "FOXE1" }
 ];
 
