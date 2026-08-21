@@ -2,7 +2,7 @@
  * FOX NATION DASHBOARD — DATA
  * -----------------------------------------------------------------
  * EVENTS: manual snapshot pulled from the Airtable "NATION AIR TABLE"
- *   (appYVkKcbQKscED3w) as of 2026-08-19. Update this array by hand
+ *   (appYVkKcbQKscED3w) as of 2026-08-21. Update this array by hand
  *   whenever the Airtable calendar changes — just add/edit/remove
  *   objects below. Each event: { date: "YYYY-MM-DD", title, category, time? }
  *
@@ -136,15 +136,21 @@ const SEED_EVENTS = [
   { date: "2026-08-19", title: "A Will Cain Interview with Jeff Metcalf", category: "Fox Nation" },
   { date: "2026-08-20", title: "GOD. FAMILY. FOOTBALL. (S3)", category: "Fox Nation" },
   { date: "2026-08-20", title: "4:00pm: Tupac Murder Trial", category: "Live Stream" },
+  { date: "2026-08-20", title: "TBD 10:00am: Karmelo Anthony hearings - possible presser", category: "Live Stream" },
+  { date: "2026-08-20", title: "3:45pm: First Lady Melania Trump has a Fostering the Future press conference in the White House Rose Garden with four INDYCAR drivers", category: "Live Stream" },
+  { date: "2026-08-20", title: "5:00pm: Conservative nonprofit lobbying group Texas Values is hosting a ‘Rally to Protect Women’s Sports’ in support of WNBA player Sophie Cunningham ahead of the Indiana Fever's game against the Dallas Wings. Location: Outside American Airlines Center in Dallas, TX. LIVE", category: "Live Stream" },
+  { date: "2026-08-20", title: "1:00pm: Freedom 250 Grand Prix INDYCAR Media Preview on Capitol Hill race drivers.", category: "Live Stream" },
   { date: "2026-08-21", title: "COPs: Florida Man Special Season 3805", category: "Series,Fox Nation" },
   { date: "2026-08-21", title: "2:45pm: RAF12- Cleveland Press Conference", category: "Live Stream" },
   { date: "2026-08-21", title: "3:00pm The Weekly Rap Sheet with Paul Mauro", category: "Live Stream" },
   { date: "2026-08-21", title: "Behind Closed Doors: The Lindsay Clancy Case", category: "Crime" },
-  { date: "2026-08-21", title: "3:00pm: Pres Trump Myrtle Beach, SC rally", category: "Live Stream" },
-  { date: "2026-08-21", title: "12:00pm: Tupac Murder Trial", category: "Live Stream" },
+  { date: "2026-08-21", title: "7:00pm: Pres Trump Myrtle Beach, SC rally", category: "Live Stream" },
+  { date: "2026-08-21", title: "VOD: Tupac Murder Trial", category: "Fox Nation" },
+  { date: "2026-08-21", title: "1:00pm: The Vice President will travel to Cincinnati, OH for a messaging event", category: "Live Stream" },
+  { date: "2026-08-21", title: "12:00pm: Secretary Robert F. Kennedy, Jr visits Rochester, Minnesota, to announce a new federal partnership focused on improving safety for autistic individuals.", category: "Live Stream" },
   { date: "2026-08-22", title: "7:45pm: RAF12- Cleveland", category: "Live Stream" },
   { date: "2026-08-22", title: "A Lara Trump Interview with Enes Kantor Freedom", category: "Fox Nation" },
-  { date: "2026-08-23", title: "2:00pm: RAF Next Gen 02", category: "Live Stream" },
+  { date: "2026-08-23", title: "2:00pm: RAF Next Gen Cleveland", category: "Live Stream" },
   { date: "2026-08-23", title: "Live with Robert Jeffress and First Baptist Dallas (10:00 AM ET) WEEKLY", category: "Fox Nation" },
   { date: "2026-08-23", title: "TBD TIME: Pres Trump attends the Freedom 250 Grand Prix", category: "Live Stream" },
   { date: "2026-08-24", title: "9:00am: Lindsay Clancy Trial", category: "Live Stream" },
@@ -163,10 +169,11 @@ const SEED_EVENTS = [
   { date: "2026-09-01", title: "12:00pm: Tyler Robinson Oral Arguments", category: "Live Stream" },
   { date: "2026-09-01", title: "TBD 7:00pm: The Murder of Charlie Kirk LIVE SHOW", category: "Live Stream" },
   { date: "2026-09-03", title: "GOD. FAMILY. FOOTBALL. (S3)", category: "Fox Nation" },
+  { date: "2026-09-03", title: "Operation Homeland", category: "Fox Nation" },
   { date: "2026-09-04", title: "COPs: Season 38 Episode 7", category: "Series,Fox Nation" },
   { date: "2026-09-04", title: "Paul Mauro's Notes From Ground Zero", category: "Special" },
   { date: "2026-09-04", title: "3:00pm The Weekly Rap Sheet with Paul Mauro", category: "Live Stream" },
-  { date: "2026-09-06", title: "RAF Next Gen 03", category: "Live Stream" },
+  { date: "2026-09-07", title: "25 Years of Tunnels to Towers", category: "Special,Fox Nation" },
   { date: "2026-09-08", title: "Born on 9/11: 25 Years With Harris Faulkner", category: "Special" },
   { date: "2026-09-09", title: "RNC Midterm Convention in Dallas, TX", category: "Live Stream" },
   { date: "2026-09-10", title: "GOD. FAMILY. FOOTBALL. (S3)", category: "Fox Nation" },
@@ -174,7 +181,6 @@ const SEED_EVENTS = [
   { date: "2026-09-11", title: "TBD: 9/11 Coverage", category: "Live Stream" },
   { date: "2026-09-13", title: "Behind the Scenes RNC with Ruthless", category: "Fox Nation" },
   { date: "2026-09-14", title: "TOXIC 2", category: "Special" },
-  { date: "2026-09-15", title: "Operation Homeland", category: "Fox Nation" },
   { date: "2026-09-16", title: "RAF Undiscovered (TBD TITLE)", category: "Fox Nation" },
   { date: "2026-09-17", title: "GOD. FAMILY. FOOTBALL. (S3)", category: "Fox Nation" },
   { date: "2026-09-17", title: "Murder on Deck 8: Who Killed Anna Kepner?", category: "Special" },
@@ -184,7 +190,7 @@ const SEED_EVENTS = [
   { date: "2026-09-19", title: "7:45pm: RAF 13 Miami", category: "Live Stream" },
   { date: "2026-09-20", title: "The Next RAF Star Live", category: "Live Stream" },
   { date: "2026-09-20", title: "TBD TIME: TPUSA Make Heaven Crowded Tour- HONOLULU, HI", category: "Live Stream" },
-  { date: "2026-09-20", title: "RAF Next Gen 04", category: "Live Stream" },
+  { date: "2026-09-20", title: "RAF Next Gen Miami", category: "Live Stream" },
   { date: "2026-09-21", title: "Man of Honor: The Michael Monsoor", category: "Special,Fox Nation" },
   { date: "2026-09-22", title: "Stories of the American Mafia Season 3", category: "Fox Nation" },
   { date: "2026-09-23", title: "Golden State Killer: Unmasking a Monster Ep 1-4", category: "History" },
@@ -196,6 +202,10 @@ const SEED_EVENTS = [
   { date: "2026-09-28", title: "Chords Of Faith", category: "Special,Fox Nation" },
   { date: "2026-09-29", title: "TBD TIME: TPUSA Make Heaven Crowded Tour- CHARLOTTE, NC", category: "Live Stream" },
   { date: "2026-09-30", title: "Russia! Russia! Russia! The Plot to Stop Trump", category: "Series" },
+  { date: "2026-10-02", title: "2:45pm: RAF Press Conference", category: "Live Stream" },
+  { date: "2026-10-02", title: "COPs: Kansas Highway Patrol Season 38 Episode 11", category: "Series,Fox Nation" },
+  { date: "2026-10-02", title: "3:00pm The Weekly Rap Sheet with Paul Mauro", category: "Live Stream" },
+  { date: "2026-10-03", title: "7:45pm: RAF 14 - Vegas", category: "Live Stream" },
   // --- FOX Sports events (manual snapshot from "High Profile Sporting
   // Events" Google Sheet, Current Schedule tab, as of 2026-08-17).
   // Filtered to Network = FOX / FOXE1 / FOXE2 only. Re-upload a fresh CSV
