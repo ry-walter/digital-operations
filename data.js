@@ -207,18 +207,17 @@ const SEED_EVENTS = [
   { date: "2026-10-02", title: "3:00pm The Weekly Rap Sheet with Paul Mauro", category: "Live Stream" },
   { date: "2026-10-03", title: "7:45pm: RAF 14 - Vegas", category: "Live Stream" },
   // --- FOX Sports events (manual snapshot from "High Profile Sporting
-  // Events" Google Sheet, Current Schedule tab, as of 2026-08-17).
+  // Events" Google Sheet, Current Schedule tab, as of 2026-08-21).
   // Filtered to Network = FOX / FOXE1 / FOXE2 only. Re-upload a fresh CSV
   // export of that tab whenever the schedule changes.
-  { date: "2026-08-17", title: "4:00 PM: Fox Noticias En Fox Deportes", category: "FOXE2" },
-  { date: "2026-08-20", title: "1:00 PM: LIV Golf - Indianapolis: Round 1", category: "FOXE1" },
-  { date: "2026-08-20", title: "4:00 PM: Fox Noticias En Fox Deportes", category: "FOXE2" },
   { date: "2026-08-21", title: "12:00 PM: LIV Golf - Indianapolis: Round 2", category: "FOXE1" },
   { date: "2026-08-21", title: "2:00 PM: LIV Golf - Indianapolis: Round 2", category: "FOX" },
+  { date: "2026-08-21", title: "4:00 PM: Fox Noticias En Fox Deportes", category: "FOXE2" },
   { date: "2026-08-22", title: "10:30 AM: IROC Practice - Washington D.C.", category: "FOXE1" },
   { date: "2026-08-22", title: "11:00 AM: LIV Golf - Indianapolis: Round 3", category: "FOX" },
   { date: "2026-08-22", title: "12:30 PM: IROC Practice - Washington D.C.", category: "FOXE1" },
   { date: "2026-08-22", title: "1:30 PM: Saratoga Live", category: "FOXE2" },
+  { date: "2026-08-22", title: "3:00 PM: Iroc Racing - Washington D.C. I", category: "FOXE1" },
   { date: "2026-08-22", title: "4:00 PM: Iroc Racing - Washington D.C. II", category: "FOXE1" },
   { date: "2026-08-22", title: "4:00 PM: AVCA First Serve - Wisconsin vs Louisville", category: "FOX" },
   { date: "2026-08-22", title: "5:00 PM: Saratoga Live", category: "FOXE2" },
